@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: powderblue;
+    }
+
+    /* Styling for header section */
+    .center {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin: 5px;
+    }
+
+    /* Top navigation bar */
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      width: 100%;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    /* Content Container with Left Panel and Gallery */
+    .container {
+      display: flex; /* Flexbox for side-by-side layout */
+      flex-direction: row;
+      padding-top: 10px; /* Space after navigation bar */
+      padding-left: 20px;
+    }
+
+    /* Left Panel Styling */
+    .left-panel {
+      width: 30%; /* Left panel takes 30% of the page */
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      margin-right: 20px; /* Space between left panel and gallery */
+    }
+
+    .left-panel h3 {
+      color: #333;
+      font-size: 24px;
+    }
+
+    .left-panel p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .left-panel a {
+      color: #04AA6D;
+      text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .left-panel a:hover {
+      text-decoration: underline;
+    }
+
+    /* Photo Gallery Section */
+    .gallery {
+      width: 70%; /* Gallery takes 70% of the page */
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Container for image slider */
+    .gallery-container {
+      position: relative;
+      width: 100%;
+    }
+
+    /* Gallery images */
+    .gallery img {
+      width: 100%; /* Images fill the container's width */
+      height: auto;
+      border-radius: 5px;
+      display: none; /* Hide images initially */
+    }
+
+    /* Display the first image by default */
+    .gallery img:first-child {
+      display: block;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack the panels vertically on smaller screens */
+        padding-left: 10px;
+      }
+
+      .left-panel, .gallery {
+        width: 100%; /* Both panels take full width on small screens */
+      }
+
+      .topnav a {
+        font-size: 14px; /* Adjust font size for mobile */
+      }
+
+      .left-panel {
+        margin-right: 0; /* Remove margin when stacked vertically */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section (Above Navigation) -->
+  <div class="center">
+    <h2>SRI NARAYANA MATRIC.HR.SEC.SCHOOL</h2>
+    <h3>Poolovapatti</h3>
+    <h3>Coimbatore-641101</h3>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <div class="topnav">
+    <a class="active" href="home.html">Home</a>
+    
+  </div>
+
+  <!-- Main Content Container (Left Panel + Gallery) -->
+  <div class="container">
+    <!-- Left Panel for Textual Content -->
+    <div class="left-panel" id="leftPanel">
+      <h3>Welcome to Our School</h3>
+      <p><strong>Sri Narayana Matriculation Higher Secondary School,</strong> Pooluvapatti (SN School) is run and managed by JJF Trust. The Trust has eminent educationalists and professionals on their Board and supports schools across India.</p>
+      <p>SN School is located in the agrarian centric village of Pooluvapatti in Coimbatore District and runs classes from LKG to Class 12.</p>
+      <p>The school is situated on ninety-five thousand square feet of land and has over twenty thousand square feet of built-up area which includes twenty Class rooms, a Library, three Science laboratories, a computer laboratory, an ATAL laboratory and a Mathematics laboratory.</p>
+      <p>The school aims at bringing out the best in each child and help them develop as responsible citizens of this country.</p>
+      <a onclick="loadMoreAboutUs()">More About Us</a> <!-- More About Us link -->
+    </div>
+
+    <!-- Photo Gallery Section -->
+    <div class="gallery">
+      <div class="gallery-container">
+        <!-- Gallery Images -->
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image4.jpg" alt="Image 3">
+        <img src="image5.jpg" alt="Image 5">
+        <img src="image6.jpg" alt="Image 6">
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript to Iterate Through Images -->
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.gallery img');
+
+    // Function to Show the Next Image
+    function showNextImage() {
+      images[currentIndex].style.display = 'none'; // Hide current image
+      currentIndex = (currentIndex + 1) % images.length; // Move to next image (wrap around)
+      images[currentIndex].style.display = 'block'; // Show next image
+    }
+
+    // Change Image Every 5 Seconds (5000ms)
+    setInterval(showNextImage, 5000); // 5000ms = 5 seconds
+
+    // Function to Load "More About Us" Content
+    function loadMoreAboutUs() {
+      const leftPanel = document.getElementById('leftPanel');
+      leftPanel.innerHTML = `
+        <h3>More About Us</h3>
+        <p><strong>Medium of Instruction</strong><br>
+
+English is the medium of instruction. English, Tamil and Hindi are offered as first/Second/third
+
+language respectively.<br><br>
+
+<strong>Curriculum</strong><br>
+
+The school is affiliated to Tamil Nadu Board of Secondary Education (TNBSE) & Tamil Nadu Board of Higher Secondary Education (TNBHSE).<br><br>
+
+<strong>Academic Session</strong><br>
+
+The school year is divided into three terms:<br>
+
+I Term-June to September<br>
+
+II Term - October to December<br>
+
+III Term - January to April.</p><br>
+        <p>We have state-of-the-art facilities that include a modern library, well-equipped science and computer labs, sports facilities, and much more to support the overall development of our students.</p>
+        <p>Our committed staff members are passionate about shaping young minds and nurturing them to be future leaders who will contribute to society and make a difference in the world.</p>
+        <a onclick="goBack()">Back to Welcome</a>
+      `;
+    }
+
+    // Function to Go Back to Initial "Welcome" Content
+    function goBack() {
+      const leftPanel = document.getElementById('leftPanel');
+      leftPanel.innerHTML = `
+        <h3>Welcome to Our School</h3>
+        <p><strong>Sri Narayana Matriculation Higher Secondary School,</strong> Pooluvapatti (SN School) is run and managed by JJF Trust. The Trust has eminent educationalists and professionals on their Board and supports schools across India.</p>
+        <p>SN School is located in the agrarian centric village of Pooluvapatti in Coimbatore District and runs classes from LKG to Class 12.</p>
+        <p>The school is situated on ninety-five thousand square feet of land and has over twenty thousand square feet of built-up area which includes twenty Class rooms, a Library, three Science laboratories, a computer laboratory, an ATAL laboratory and a Mathematics laboratory.</p>
+        <p>The school aims at bringing out the best in each child and help them develop as responsible citizens of this country.</p>
+        <a onclick="loadMoreAboutUs()">More About Us</a> <!-- More About Us link -->
+      `;
+    }
+  </script>
+
+</body>
+</html>
