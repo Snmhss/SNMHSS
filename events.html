@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: powderblue;
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin: 5px;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      width: 100%;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+    }
+
+    .left-panel {
+      width: 30%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-right: 20px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .left-panel h3 {
+      color: #333;
+      font-size: 24px;
+    }
+
+    .left-panel p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .left-panel a {
+      color: #04AA6D;
+      text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .left-panel a:hover {
+      text-decoration: underline;
+    }
+
+    /* Static image gallery */
+    .gallery {
+      width: 70%;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+    }
+
+    /* Event gallery */
+    .event-gallery {
+      padding: 20px;
+    }
+
+    .event-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .event-column {
+      text-align: center;
+    }
+
+    .event-column img {
+      width: 200px;
+      height: 200px;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+    }
+
+    .event-column div {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-panel, .gallery {
+        width: 100%;
+      }
+
+      .gallery {
+        justify-content: center;
+      }
+
+      .event-column img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="center">
+    <h2>SRI NARAYANA MATRIC.HR.SEC.SCHOOL</h2>
+    <h3>Poolovapatti</h3>
+    <h3>Coimbatore-641101</h3>
+  </div>
+
+  <!-- Navigation -->
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a class="active" href="events.html">Events</a>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-panel" id="leftPanel">
+      <h3>Welcome to Our School</h3>
+      <p><strong>Sri Narayana Matriculation Higher Secondary School,</strong> Pooluvapatti (SN School) is run and managed by JJF Trust. The Trust has eminent educationalists and professionals on their Board and supports schools across India.</p>
+      <p>SN School is located in the agrarian centric village of Pooluvapatti in Coimbatore District and runs classes from LKG to Class 12.</p>
+      <p>The school is situated on ninety-five thousand square feet of land and has over twenty thousand square feet of built-up area which includes twenty Class rooms, a Library, three Science laboratories, a computer laboratory, an ATAL laboratory and a Mathematics laboratory.</p>
+      <p>The school aims at bringing out the best in each child and help them develop as responsible citizens of this country.</p>
+      <a onclick="loadMoreAboutUs()">More About Us</a>
+    </div>
+
+    <div class="event-gallery">
+  <h2 style="text-align:center;">Our Events</h2>
+
+  <!-- First Row of 6 Event Images -->
+  <div class="event-row">
+    <div class="event-column">
+      <img src="pongal/pong.png" alt="Pongal Celebration">
+      <div>Pongal Celebration</div>
+    </div>
+    <div class="event-column">
+      <img src="sports-day/sport.png" alt="Sports Day">
+      <div>Sports Day</div>
+    </div>
+    <div class="event-column">
+      <img src="yellow-day/yellow3.png" alt="yellow day">
+      <div>Yellow Day</div>
+    </div>
+    <div class="event-column">
+      <img src="art-exhibition/arts.png" alt="Art Exhibition">
+      <div>Art Exhibition</div>
+    </div>
+    <div class="event-column">
+      <img src="robots/robots.jpeg" alt="project Day">
+      <div>Project Day</div>
+    </div>
+    <div class="event-column">
+      <img src="projectday/projectday.png" alt="Projectday">
+      <div>Club Activity</div>
+    </div>
+  </div>
+
+  <!-- Title between the rows -->
+  <h3 style="text-align:center; margin: 20px 0;">School Toppers-HSC</h3>
+
+  <!-- Second Row of 6 Event Images -->
+  <div class="event-row">
+    <div class="event-column">
+      <img src="toppers/topper1.jpeg" alt="topper1">
+      <div>MITHUN N</div>
+	  <div>556/600</div>
+    </div>
+    <div class="event-column">
+      <img src="toppers/topper2.jpeg" alt="topper2">
+      <div>NITHISH P</div>
+	  <div>552/600</div>
+    </div>
+    <div class="event-column">
+      <img src="toppers/topper3.jpeg" alt="topper3">
+      <div>DAKSHIN K</div>
+	  <div>548/600</div>
+    </div>
+  </div>
+</div>
+  <!-- JS for About Us -->
+  <script>
+    function loadMoreAboutUs() {
+      const leftPanel = document.getElementById('leftPanel');
+      leftPanel.innerHTML = `
+        <h3>More About Us</h3>
+        <p><strong>Medium of Instruction</strong><br>
+        English is the medium of instruction. English, Tamil and Hindi are offered as first/Second/third language respectively.<br><br>
+        <strong>Curriculum</strong><br>
+        The school is affiliated to Tamil Nadu Board of Secondary Education (TNBSE) & Tamil Nadu Board of Higher Secondary Education (TNBHSE).<br><br>
+        <strong>Academic Session</strong><br>
+        The school year is divided into three terms:<br>
+        I Term-June to September<br>
+        II Term - October to December<br>
+        III Term - January to April.</p><br>
+        <p>We have state-of-the-art facilities that include a modern library, well-equipped science and computer labs, sports facilities, and much more to support the overall development of our students.</p>
+        <p>Our committed staff members are passionate about shaping young minds and nurturing them to be future leaders who will contribute to society and make a difference in the world.</p>
+        <a onclick="goBack()">Back to Welcome</a>
+      `;
+    }
+
+    function goBack() {
+      const leftPanel = document.getElementById('leftPanel');
+      leftPanel.innerHTML = `
+        <h3>Welcome to Our School</h3>
+        <p><strong>Sri Narayana Matriculation Higher Secondary School,</strong> Pooluvapatti (SN School) is run and managed by JJF Trust. The Trust has eminent educationalists and professionals on their Board and supports schools across India.</p>
+        <p>SN School is located in the agrarian centric village of Pooluvapatti in Coimbatore District and runs classes from LKG to Class 12.</p>
+        <p>The school is situated on ninety-five thousand square feet of land and has over twenty thousand square feet of built-up area which includes twenty Class rooms, a Library, three Science laboratories, a computer laboratory, an ATAL laboratory and a Mathematics laboratory.</p>
+        <p>The school aims at bringing out the best in each child and help them develop as responsible citizens of this country.</p>
+        <a onclick="loadMoreAboutUs()">More About Us</a>
+      `;
+    }
+  </script>
+
+</body>
+</html>
