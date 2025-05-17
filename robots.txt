@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://snmhss.github.io/SNMHSS/
