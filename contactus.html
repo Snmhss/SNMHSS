@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School Info</title>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: powderblue;
+    }
+
+    .center {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin: 5px;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      width: 100%;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+
+    .left-panel {
+      width: 30%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      margin-right: 20px;
+    }
+
+    .left-panel h3 {
+      color: #333;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .left-panel p, .left-panel a {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .left-panel a {
+      color: #04AA6D;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .left-panel a:hover {
+      text-decoration: underline;
+    }
+
+    .left-panel img.school-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 15px;
+    }
+
+    .gallery {
+      width: 70%;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .gallery-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+    }
+
+    .gallery iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding-left: 10px;
+      }
+
+      .left-panel, .gallery {
+        width: 100%;
+      }
+
+      .topnav a {
+        font-size: 14px;
+      }
+
+      .left-panel {
+        margin-right: 0;
+      }
+    }
+
+    .icon {
+      margin-right: 8px;
+      color: #04AA6D;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="center">
+    <h2>SRI NARAYANA MATRIC.HR.SEC.SCHOOL</h2>
+    <h3>Poolovapatti</h3>
+    <h3>Coimbatore-641101</h3>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a class="active" href="events.html">Events</a>
+    <a class="active" href="Contactus.html">Locate us</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Left Panel with Image and Contact Info -->
+    <div class="left-panel" id="leftPanel">
+      <div style="text-align: center;">
+        <img src="logo.jpeg" alt="School" class="school-photo">
+      </div>
+
+      <h3>Contact Information</h3>
+      <p>
+        <i class="fas fa-map-marker-alt icon"></i>
+        Sri Narayana Matriculation Hr. Sec. School,<br>
+        Pooluvapatti, Coimbatore – 641101
+      </p>
+      <p>
+        <i class="fas fa-phone icon"></i>
+        +91 84896-41102
+      </p>
+      <p>
+        <a href="https://facebook.com/school" target="_blank">
+          <i class="fab fa-facebook icon"></i>Facebook Page
+        </a>
+      </p>
+      <p>
+        <a href="https://instagram.com/school" target="_blank">
+          <i class="fab fa-instagram icon"></i>Instagram Page
+        </a>
+      </p>
+    </div>
+
+    <!-- Right Panel with Map -->
+    <div class="gallery">
+      <div class="gallery-container">
+        <iframe 
+          src="https://www.google.com/maps?q=Sri%20Narayana%20Matriculation%20Higher%20Secondary%20School,%20Pooluvapatti,%20Coimbatore&output=embed"
+          allowfullscreen 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
