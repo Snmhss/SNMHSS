@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://snmhss.github.io/SNMHSS/
+Sitemap: https://snmhss.github.io/SNMHSS/sitemap.xml/
